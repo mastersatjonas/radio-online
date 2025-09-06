@@ -19,3 +19,10 @@ const title = document.querySelector('header h1');
 setInterval(() => {
   title.style.color = title.style.color === 'white' ? '#ff4081' : 'white';
 }, 1000);
+const menuToggle = document.getElementById('mobile-menu');
+const navMenu = document.querySelector('.nav-menu');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  navMenu.classList.toggle('active');
+});

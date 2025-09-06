@@ -1,3 +1,7 @@
+/* ======================
+   ESTILO BASE
+====================== */
+
 /* Fonte padrão */
 body {
   margin: 0;
@@ -8,26 +12,76 @@ body {
 }
 
 /* Cabeçalho */
+
 .header {
   background: #222;
-  padding: 15px;
-  text-align: center;
+  padding: 15px 20px 15px 120px; /* mantém espaço para logo */
   position: sticky;
   top: 0;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* alinha items à esquerda */
+  height: 100px;
+  gap: 20px; /* espaço entre logo, título e nav */
 }
+
+
+
+/* Logo fixo */
+.header-logo {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  width: 100px;
+  z-index: 1000;
+}
+
+.header-logo img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* Título */
 .header h1 {
   margin: 0;
   font-size: 24px;
 }
-.header nav a {
-  margin: 0 10px;
+
+/* Navegação */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
   text-decoration: none;
   color: #ff4081;
   font-weight: bold;
+  transition: 0.3s;
 }
-.header nav a:hover {
+
+.nav-menu a:hover {
   color: #fff;
+}
+
+/* Menu toggle alinhado à direita */
+.menu-toggle {
+  margin-left: auto; /* empurra para o extremo direito */
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  justify-content: space-between;
+}
+
+.menu-toggle .bar {
+  height: 4px;
+  width: 100%;
+  background-color: #ff4081;
+  border-radius: 2px;
+  transition: all 0.3s;
 }
 
 /* Seções */
@@ -35,6 +89,7 @@ body {
   padding: 50px 20px;
   text-align: center;
 }
+
 .bg-light {
   background: #f4f4f4;
   color: #111;
@@ -47,6 +102,7 @@ body {
   margin: 20px auto;
   aspect-ratio: 16/9;
 }
+
 .player-container iframe {
   width: 100%;
   height: 100%;
@@ -59,10 +115,19 @@ body {
   color: #ff4081;
   animation: pulse 1.5s infinite;
 }
+
 @keyframes pulse {
-  0% { opacity: 1; }
-  50% { opacity: 0.3; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Programação */
@@ -70,32 +135,10 @@ ul {
   list-style: none;
   padding: 0;
 }
+
 ul li {
   margin: 10px 0;
   font-size: 18px;
-}
-
-/* Contato */
-form {
-  max-width: 400px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-}
-form input, form textarea, form button {
-  margin: 10px 0;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-}
-form button {
-  background: #ff4081;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-}
-form button:hover {
-  background: #e91e63;
 }
 
 /* Redes Sociais */
@@ -116,9 +159,17 @@ form button:hover {
   transition: 0.3s;
 }
 
-.social-links a.instagram { background: #E1306C; }
-.social-links a.whatsapp { background: #25D366; }
-.social-links a.linkedin { background: #0077b5; }
+.social-links a.instagram {
+  background: #E1306C;
+}
+
+.social-links a.whatsapp {
+  background: #25D366;
+}
+
+.social-links a.linkedin {
+  background: #0077b5;
+}
 
 .social-links a:hover {
   transform: scale(1.1);
@@ -131,4 +182,147 @@ footer {
   padding: 20px;
   text-align: center;
   color: #aaa;
+}
+
+/* ======================
+   RESPONSIVIDADE
+====================== */
+
+/* Tablets <=1024px */
+@media(max-width:1024px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .player-container iframe {
+    height: 350px;
+  }
+
+  .nav-menu a {
+    font-size: 0.95rem;
+  }
+}
+
+/* Smartphones <=768px */
+@media(max-width:768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .nav-menu a {
+    margin: 3px 0;
+  }
+
+  .player-container iframe {
+    height: 300px;
+  }
+
+  .section {
+    padding: 70px 15px 40px 15px;
+  }
+}
+
+/* Smartphones <=480px */
+@media(max-width:480px) {
+  .header-logo {
+    width: 50px;
+  }
+
+  .header h1 {
+    font-size: 1.2rem;
+  }
+
+  .player-container iframe {
+    height: 250px;
+  }
+
+  ul li {
+    font-size: 16px;
+    margin: 6px 0;
+  }
+
+  p {
+    max-width: 260px;
+    font-size: 0.9rem;
+    margin: auto;
+  }
+
+  .social-links {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+
+  .social-links a {
+    font-size: 0.85rem;
+    padding: 8px 15px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    background: #222;
+    padding: 10px 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
+
+/* Smartphones muito pequenos <=360px */
+@media(max-width:360px) {
+  .header-logo {
+    width: 45px;
+  }
+
+  .header h1 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .nav-menu a {
+    font-size: 0.8rem;
+    margin: 2px 0;
+  }
+
+  .player-container iframe {
+    height: 200px;
+  }
+
+  ul li {
+    font-size: 14px;
+    margin: 4px 0;
+  }
+
+  p {
+    max-width: 240px;
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .social-links a {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
 }
