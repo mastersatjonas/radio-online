@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rádio IDE — A Voz que Transforma. Louvor, Palavra de Deus e informação para toda a família.">
+  <meta name="theme-color" content="#07152f">
+
+  <title>Rádio IDE | A Voz que Transforma</title>
+
+ <link rel="icon" href="./img/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="header" id="inicio">
+    <div class="container header-content">
+      <a href="#inicio" class="brand" aria-label="Página inicial da Rádio IDE">
+        <img src="./img/logo.png" alt="Logotipo da Rádio IDE">
+        <span class="brand-text">
+          <strong>Rádio IDE</strong>
+          <small>A Voz que Transforma</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="mobile-menu"
+        type="button"
+        aria-label="Abrir menu"
+        aria-controls="nav-menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Navegação principal">
+        <a href="#ao-vivo">Ao vivo</a>
+        <a href="#programacao">Programação</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+        <a class="nav-button" href="#ao-vivo">
+          <i class="fa-solid fa-headphones"></i>
+          Ouvir agora
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero">
+      <div class="hero-light hero-light-one"></div>
+      <div class="hero-light hero-light-two"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="live-badge">
+            <span class="live-dot"></span>
+            Rádio gospel online
+          </div>
+
+          <p class="eyebrow">Levando a mensagem além das fronteiras</p>
+          <h1>Uma voz de fé que <span>transforma vidas.</span></h1>
+
+          <p class="hero-description">
+            Louvores, mensagens, informação e uma programação preparada
+            para fortalecer sua fé todos os dias.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#ao-vivo">
+              <i class="fa-solid fa-circle-play"></i>
+              Ouvir transmissão
+            </a>
+
+            <a class="button button-secondary" id="hero-whatsapp" href="#" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp"></i>
+              Falar com a rádio
+            </a>
+          </div>
+
+          <div class="hero-info">
+            <div>
+              <i class="fa-solid fa-radio"></i>
+              <span>
+                <small>No ar agora</small>
+                <strong id="programa-atual">Programação Rádio IDE</strong>
+              </span>
+            </div>
+
+            <div>
+              <i class="fa-regular fa-clock"></i>
+              <span>
+                <small>Transmissão</small>
+                <strong>24 horas por dia</strong>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-hidden="true">
+          <div class="signal signal-one"></div>
+          <div class="signal signal-two"></div>
+          <div class="signal signal-three"></div>
+
+          <div class="hero-logo">
+            <img src="./img/logo.png" alt="">
+          </div>
+
+          <div class="equalizer">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+
+          <p>Rádio IDE</p>
+          <strong>A Voz que Transforma</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="live-section section" id="ao-vivo">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Conecte-se agora</p>
+            <h2>Transmissão ao vivo</h2>
+          </div>
+
+          <div class="on-air">
+            <span></span>
+            NO AR
+          </div>
+        </div>
+
+        <div class="broadcast-grid">
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe
+                id="youtube-player"
+                src=""
+                title="Transmissão ao vivo da Rádio IDE"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <aside class="now-playing">
+            <span class="card-label">Tocando agora</span>
+            <img src="./img/logo.png" alt="Rádio IDE" class="now-playing-logo">
+
+            <div>
+              <p>Você está ouvindo</p>
+              <h3 id="programa-card">Rádio IDE ao vivo</h3>
+              <span id="horario-programa">Programação 24 horas</span>
+            </div>
+
+            <div class="sound-bars" id="sound-bars" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+
+            <p class="player-note" id="player-note">
+              Clique em play para ouvir a rádio ao vivo.
+            </p>
+
+            <button type="button" class="button button-primary button-full" id="audio-play-btn">
+              <i class="fa-solid fa-play" id="audio-play-icon"></i>
+              <span id="audio-play-label">Ouvir agora</span>
+            </button>
+
+            <a class="button button-secondary button-full" id="youtube-channel" href="#" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-youtube"></i>
+              Ver no YouTube
+            </a>
+
+            <audio id="radio-audio" preload="none"></audio>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="program-section section" id="programacao">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="eyebrow">Todos os dias com você</p>
+          <h2>Nossa programação</h2>
+          <p>Uma grade com louvor, oração, Palavra de Deus e informação.</p>
+        </div>
+
+        <div class="schedule-grid" id="schedule-grid">
+          <!-- Os programas são inseridos pelo JavaScript. -->
+        </div>
+
+        <p class="schedule-warning">
+          * Programação demonstrativa. Edite os horários no arquivo <strong>script.js</strong>.
+        </p>
+      </div>
+    </section>
+
+    <section class="verse-section">
+      <div class="container verse-content">
+        <i class="fa-solid fa-quote-left"></i>
+        <blockquote>
+          “Ide por todo o mundo, pregai o evangelho a toda criatura.”
+        </blockquote>
+        <p>Marcos 16:15</p>
+      </div>
+    </section>
+
+    <section class="about-section section" id="sobre">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <div class="about-icon">
+            <i class="fa-solid fa-microphone-lines"></i>
+          </div>
+
+          <div class="about-card">
+            <strong>Evangelizando</strong>
+            <span>através da comunicação</span>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow">Conheça nossa missão</p>
+          <h2>Uma rádio feita para anunciar esperança</h2>
+
+          <p>
+            A Rádio IDE nasceu com o propósito de compartilhar o Evangelho,
+            edificar famílias e criar uma conexão diária por meio da música,
+            da Palavra e de conteúdos que fazem bem.
+          </p>
+
+          <div class="about-features">
+            <article>
+              <i class="fa-solid fa-cross"></i>
+              <div>
+                <h3>Palavra de Deus</h3>
+                <p>Mensagens para fortalecer a fé e renovar a esperança.</p>
+              </div>
+            </article>
+
+            <article>
+              <i class="fa-solid fa-music"></i>
+              <div>
+                <h3>Louvores</h3>
+                <p>Uma seleção de músicas para adorar em todos os momentos.</p>
+              </div>
+            </article>
+
+            <article>
+              <i class="fa-solid fa-users"></i>
+              <div>
+                <h3>Para toda a família</h3>
+                <p>Conteúdo cristão, acolhedor e acessível para todas as idades.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section" id="contato">
+      <div class="container contact-card">
+        <div>
+          <p class="eyebrow">Participe da programação</p>
+          <h2>Peça seu louvor ou envie seu testemunho</h2>
+          <p>
+            Entre em contato pelo WhatsApp e participe da Rádio IDE.
+          </p>
+        </div>
+
+        <a class="button button-whatsapp" id="contact-whatsapp" href="#" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i>
+          Enviar mensagem
+        </a>
+      </div>
+    </section>
+
+    <section class="social-section section" id="redes">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="eyebrow">Acompanhe a rádio</p>
+          <h2>Estamos nas redes sociais</h2>
+        </div>
+
+        <div class="social-grid">
+          <a id="instagram-link" href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram"></i>
+            <span>
+              <strong>Instagram</strong>
+              <small>Siga nossas publicações</small>
+            </span>
+          </a>
+
+          <a id="whatsapp-link" href="https://w.app/radioide" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>
+              <strong>WhatsApp</strong>
+              <small>Fale com nossa equipe</small>
+            </span>
+          </a>
+
+          <a id="youtube-link" href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-youtube"></i>
+            <span>
+              <strong>YouTube</strong>
+              <small>Assista às transmissões</small>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="#inicio" class="brand footer-brand">
+        <img src="./img/logo.png" alt="Rádio IDE">
+        <span class="brand-text">
+          <strong>Rádio IDE</strong>
+          <small>A Voz que Transforma</small>
+        </span>
+      </a>
+
+      <p>
+        © <span id="current-year"></span> Rádio IDE. Todos os direitos reservados.
+      </p>
+
+      <a href="#inicio" class="back-to-top" aria-label="Voltar ao início">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" id="floating-whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Falar com a Rádio IDE pelo WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="./script.js"></script>
+</body>
+</html>
